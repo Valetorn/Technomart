@@ -426,3 +426,8 @@ template {
   font-weight: 700;
   src: local("PT Sans"), local("PT Sans-Bold"), url("../fonts/PT_Sans/PT_Sans-Web-Bold.woff2") format("woff2"), url("../fonts/PT_Sans/PT_Sans-Web-Bold.woff") format("woff");
 }
+.inner {
+  width: 940px;
+  margin: 0;
+  padding: 0 10px;
+}

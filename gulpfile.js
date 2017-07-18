@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     mqpacker = require('css-mqpacker'),
     minify = require('gulp-csso'),
     rename = require('gulp-rename'),
-    imagemin = require('gulp-imagemin'), 
+    imagemin = require('gulp-imagemin'),
     dirSync = require('gulp-directory-sync'),
     del = require('del'),
     uglify = require('gulp-uglify'),
@@ -88,14 +88,14 @@ gulp.task('clean', function () {
     return del(buildDir);
 });
 
-gulp.task('imgBuild', function () { 
+gulp.task('imgBuild', function () {
     return gulp.src(outputDir + 'img/**/*')
     .pipe(imagemin([
       imagemin.optipng({optimizationLever: 3}),
       imagemin.jpegtran({progressive: true})
     ]))
     .pipe(gulp.dest(buildDir + 'img/'));
-}); 
+});
 
 gulp.task('fontsBuild', function () {
     return gulp.src(outputDir + 'fonts/**/*')
