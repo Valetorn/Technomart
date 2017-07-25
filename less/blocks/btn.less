@@ -1,0 +1,19 @@
+.btn {
+	.no-indents;
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+
+	&--green {
+		background-color: @green;
+
+		&:hover {
+			background-color: lighten(@green, 10%);
+		}
+	}
+
+	&--white {
+		background-color: @btn-white;
+	}
+}

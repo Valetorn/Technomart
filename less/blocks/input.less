@@ -1,0 +1,28 @@
+.input {
+	&--search {
+		.font("Cuprum", sans-serif; 1.063rem; 17px; 400; #ffffff);
+		width: 100%;
+		height: 100%;
+		padding-left: 47px;
+		background-color: @dark-blue;
+		border: none;
+		background-image: @icon-search--opacity;
+		background-repeat: no-repeat;
+		background-position: 6.7% 47%;
+
+		&:hover {
+			background-image: @icon-search;
+		}
+
+		&:focus {
+			background-color: #ffffff;
+			background-image: @icon-search--red;
+			color: #000000;
+		}
+
+		&::placeholder {
+			.font("Cuprum", sans-serif; 1.063rem; 17px; 400; #ffffff);
+		}
+	}
+}
+
