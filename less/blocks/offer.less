@@ -1,0 +1,99 @@
+.offer {
+	position: relative;
+	flex-basis: 300px;
+	min-height: 123px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+	}
+
+	&--paint {
+		&::after {
+			top: 31px;
+			right: 43px;
+			width: 44px;
+			height: 65px;
+			background-image: @icon-paint;
+		}
+	}
+
+	&--drill {
+		&::after {
+			top: 33px;
+			right: 28px;
+			width: 75px;
+			height: 61px;
+			background-image: @icon-drill;
+		}
+	}
+
+	&--tractor {
+		&::after {
+			top: 31px;
+			right: 31px;
+			width: 78px;
+			height: 62px;
+			background-image: @icon-tractor;
+		}
+	}
+
+	&--shop-card {
+		&::after {
+			top: 26px;
+			right: 45px;
+			width: 59px;
+			height: 72px;
+			background-image: @icon-shop-card;
+		}
+	}
+
+	&--delivery {
+		&::after {
+			top: 32px;
+			right: 31px;
+			width: 78px;
+			height: 63px;
+			background-image: @icon-delivery;
+		}
+	}
+
+	&--orange {
+		background-color: @orange;
+	}
+
+	&--blue {
+		background-color: @light-blue;
+	}
+
+	&--purple {
+		background-color: @purple;
+	}
+
+	&--green {
+		background-color: @light-green;
+	}
+
+	&__text {
+		.font("Cuprum", sans-serif; 1.5rem; 30px; 700; #ffffff);
+		margin-top: 26px;
+		margin-left: 23px;
+	}
+
+	&__btn {
+		.font("Cuprum", sans-serif; 0.875rem; 18px; 400; #ffffff);
+		position: absolute;
+		top: 63px;
+		left: 25px;
+		display: block;
+		min-width: 135px;
+		padding: 0 24px;
+		padding-top: 12px;
+		padding-bottom: 14px;
+		text-align: center;
+		box-sizing: border-box;
+		text-transform: uppercase;
+	}
+}

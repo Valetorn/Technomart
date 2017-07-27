@@ -1,0 +1,76 @@
+.slider {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-basis: 620px;
+	min-height: 265px;
+	overflow: hidden;
+
+	&__slide {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__slide-2 {
+		display: none;
+	}
+
+	&__content {
+		position: absolute;
+		top: 26px;
+		left: 26px;
+	}
+
+	&__title {
+		.font("Cuprum", sans-serif; 2.25rem; 30px; 700; #ffffff);
+		margin-bottom: 8px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		.font("PT Sans", sans-serif; 1.125rem; 24px; 400; #ffffff);
+	}
+
+	&__btn {
+		display: none;
+	}
+
+	&__priview {
+		width: 100%;
+		height: 100%;
+		background-color: #000000;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__btn {
+		.font("Cuprum", sans-serif; 0.825rem; 18px; 400; #ffffff);
+		position: absolute;
+		left: 25px;
+		bottom: 22px;
+		display: block;
+		min-width: 196px;
+		padding: 10px 0;
+		padding-left: 49px;
+		padding-right: 45px;
+		box-sizing: border-box;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 114px;
+
+		&--prev {
+			left: 25px;
+		}
+
+		&--next {
+			right: 25px;
+		}
+	}
+}
