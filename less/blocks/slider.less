@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-basis: 620px;
-	min-height: 265px;
+	height: 266px;
 	overflow: hidden;
 
 	&__slide {
@@ -24,7 +24,7 @@
 
 	&__title {
 		.font("Cuprum", sans-serif; 2.25rem; 30px; 700; #ffffff);
-		margin-bottom: 8px;
+		margin-bottom: 6px;
 		text-transform: uppercase;
 	}
 
@@ -63,14 +63,29 @@
 
 	&__arrow {
 		position: absolute;
-		top: 114px;
+		top: 112px;
 
 		&--prev {
 			left: 25px;
 		}
 
 		&--next {
-			right: 25px;
+			right: 18px;
 		}
+	}
+
+	&__controls-container {
+		position: absolute;
+		left: 290px;
+		bottom: 36px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		min-width: 40px;
+	}
+
+	&__control {
+		width: 10px;
+		height: 10px;
 	}
 }

@@ -567,6 +567,7 @@ img {
   background-image: url(../img/icon-search--opacity.png);
   background-repeat: no-repeat;
   background-position: 6.7% 47%;
+  box-sizing: border-box;
 }
 .input--search:hover {
   background-image: url(../img/icon-search.png);
@@ -627,15 +628,15 @@ img {
   opacity: 1;
 }
 .user-choice__tab::after {
-  top: 0.706em;
-  left: 1em;
+  top: 12px;
+  left: 19px;
   width: 14px;
   height: 16px;
   background-image: url(../img/icon-bookmark.png);
 }
 .user-choice__shopping-card::after {
-  top: 0.706em;
-  left: 0.941em;
+  top: 12px;
+  left: 17px;
   width: 17px;
   height: 16px;
   background-image: url(../img/icon-basket.png);
@@ -668,6 +669,10 @@ img {
 .btn--green:hover {
   background-color: #7cc057;
 }
+.btn--green:active {
+  background-color: #4d8130;
+  box-shadow: none;
+}
 .btn--white {
   background-color: #ffffff;
 }
@@ -689,6 +694,16 @@ img {
 .btn--opacity:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
+.btn--border {
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+.btn--border:hover {
+  border-color: #293449;
+}
+.btn--border:active {
+  opacity: 0.3;
+}
 .btn--arrow {
   width: 45px;
   height: 45px;
@@ -699,9 +714,9 @@ img {
   content: "";
   position: absolute;
   top: 20%;
-  width: 22px;
-  height: 22px;
-  border: 4px solid #ffffff;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ffffff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -718,6 +733,12 @@ img {
   left: 25%;
   border-left: none;
   border-bottom: none;
+}
+.btn--slider-control {
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #ee3643;
+  border: 5px solid #ffffff;
 }
 .hero {
   display: -webkit-box;
@@ -937,6 +958,8 @@ main {
           justify-content: center;
   align-content: center;
   width: 100%;
+  padding-top: 59px;
+  padding-bottom: 53px;
 }
 .facilities__block {
   display: -webkit-box;
@@ -1021,13 +1044,13 @@ main {
 .offer--green {
   background-color: #85d179;
 }
-.offer__text {
+.offer__title {
   font-family: "Cuprum", sans-serif;
   font-size: 1.5rem;
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
-  margin-top: 26px;
+  margin-top: 20px;
   margin-left: 23px;
 }
 .offer__btn {
@@ -1041,9 +1064,7 @@ main {
   left: 25px;
   display: block;
   min-width: 135px;
-  padding: 0 24px;
-  padding-top: 12px;
-  padding-bottom: 14px;
+  padding: 10px 24px;
   text-align: center;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -1056,7 +1077,7 @@ main {
   -webkit-box-direction: normal;
           flex-direction: row;
   flex-basis: 620px;
-  min-height: 265px;
+  height: 266px;
   overflow: hidden;
 }
 .slider__slide {
@@ -1078,7 +1099,7 @@ main {
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
 }
 .slider__text {
@@ -1119,11 +1140,233 @@ main {
 }
 .slider__arrow {
   position: absolute;
-  top: 114px;
+  top: 112px;
 }
 .slider__arrow--prev {
   left: 25px;
 }
 .slider__arrow--next {
-  right: 25px;
+  right: 18px;
+}
+.slider__controls-container {
+  position: absolute;
+  left: 290px;
+  bottom: 36px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  justify-content: space-around;
+  min-width: 40px;
+}
+.slider__control {
+  width: 10px;
+  height: 10px;
+}
+.new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
+  background-image: url(../img/new.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+.popular-goods {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.popular-goods .inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.popular-goods__head {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 89px;
+  margin-bottom: 20px;
+  background-color: #f7f3ec;
+}
+.popular-goods__title {
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+.popular-goods__btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  min-width: 253px;
+  margin-right: 24px;
+  padding: 10px 55px;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.popular-goods__container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.product {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-basis: 220px;
+  max-width: 220px;
+  height: 318px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+.product:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+.product:hover .product__preview {
+  display: none;
+}
+.product:hover .product__btn-container {
+  display: -webkit-box;
+  display: flex;
+}
+.product__btn-container {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  height: 82px;
+}
+.product__shopcard-btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  min-width: 135px;
+  padding: 10px 0;
+  padding-left: 49px;
+  padding-right: 45px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  box-shadow: inset 0 -3px 0 #367315;
+}
+.product__shopcard-btn::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 17px;
+  height: 16px;
+  background-image: url(../img/icon-basket.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  opacity: 0.5;
+}
+.product__shopcard-btn:hover::before {
+  opacity: 1;
+}
+.product__tab-btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #293449;
+  min-width: 135px;
+  padding: 7px 0;
+  padding-left: 36px;
+  padding-right: 32px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+.product__container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  align-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  height: 164px;
+}
+.product__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
+  display: block;
+  width: 160px;
+}
+.product__old-price {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 18px;
+  font-weight: 700;
+  color: #999999;
+  text-decoration: line-through;
+}
+.product__btn {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  padding: 10px 0;
+  padding-left: 36px;
+  padding-right: 16px;
+  margin-bottom: 21px;
+  border-radius: 5px  0 0 5px;
+  text-transform: uppercase;
+}
+.product__btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -38px;
+  border: 19px solid transparent;
+  border-left-color: #ee3643;
+}
+.product__btn:hover::after {
+  border-left-color: #ed2d3a;
+}
+.product__btn:active::after {
+  border-left-color: #ec2331;
 }

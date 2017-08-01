@@ -11,6 +11,11 @@
 		&:hover {
 			background-color: lighten(@green, 10%);
 		}
+
+		&:active {
+			background-color: darken(@green, 10%);
+			box-shadow: none;
+		}
 	}
 
 	&--white {
@@ -41,6 +46,19 @@
 		}
 	}
 
+	&--border {
+		background-color: #ffffff;
+		border: 3px solid @green;
+
+		&:hover {
+			border-color: @dark-blue;
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
+	}
+
 	&--arrow {
 		width: 45px;
 		height: 45px;
@@ -51,9 +69,9 @@
 				content: "";
 				position: absolute;
 				top: 20%;
-				width: 22px;
-				height: 22px;
-				border: 4px solid #ffffff;
+				width: 24px;
+				height: 24px;
+				border: 3px solid #ffffff;
 				transform: rotate(45deg);
 			}
 
@@ -79,5 +97,12 @@
 				border-bottom: none;
 			}
 		}
+	}
+
+	&--slider-control {
+		border-radius: 50%;
+		box-sizing: border-box;
+		background-color: @dark-red;
+		border: 5px solid #ffffff;
 	}
 }

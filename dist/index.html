@@ -96,27 +96,27 @@
 				<div class="inner">
 					<div class="facilities__block facilities__block--top">
 						<aside class="offer offer--orange offer--paint new">
-							<p class="offer__text">Материалы</p>
+							<h4 class="offer__title">Материалы</h4>
 
 							<a href="#" class="btn btn--opacity offer__btn">на любой вкус</a>
 						</aside>
 
 						<aside class="offer offer--blue offer--drill">
-							<p class="offer__text">Инструмент</p>
+							<h4 class="offer__title">Инструмент</h4>
 
 							<a href="#" class="btn btn--opacity offer__btn">на все случаи</a>
 						</aside>
 
 						<aside class="offer offer--purple offer--tractor">
-							<p class="offer__text">Техника</p>
+							<h4 class="offer__title">Техника</h4>
 
 							<a href="#" class="btn btn--opacity offer__btn">для стройки</a>
 						</aside>
 					</div>
 
 					<div class="facilities__block facilities__block--bottom">
-						<aside class="slider">
-							<div class="slider__slide slider__slide-1">
+						<aside class="slider" id="slider">
+							<div class="slider__slide slider__slide-1" id="slider__slide1">
 								<div class="slider__content">
 									<h2 class="slider__title">Перфораторы</h2>
 
@@ -128,7 +128,7 @@
 								</figure>
 							</div>
 
-							<div class="slider__slide slider__slide-2">
+							<div class="slider__slide slider__slide-2" id="slider__slide2">
 								<div class="slider__content">
 									<h2 class="slider__title">Дрели</h2>
 
@@ -140,22 +140,28 @@
 								</figure>
 							</div>
 
-							<button class="btn btn--arrow btn--arrow-prev slider__arrow slider__arrow--prev"></button>
+							<button class="btn btn--arrow btn--arrow-prev slider__arrow slider__arrow--prev" id="slide-prev"></button>
 
-							<button class="btn btn--arrow btn--arrow-next slider__arrow slider__arrow--next"></button>
+							<button class="btn btn--arrow btn--arrow-next slider__arrow slider__arrow--next" id="slide-next"></button>
+
+							<div class="slider__controls-container" id="slider__controls">
+								<button class="btn btn--slider-control slider__control"></button>
+
+								<button class="btn btn--slider-control slider__control"></button>
+							</div>
 
 							<a href="#" class="btn btn--red slider__btn">Открыть каталог</a>
 						</aside>
 
 						<div class="facilities__inner-block">
 							<aside class="offer offer--green offer--shop-card">
-								<p class="offer__text">Скидки 50%</p>
+								<h4 class="offer__title">Скидки 50%</h4>
 
 								<a href="#" class="btn btn--opacity offer__btn">на 350 товаров</a>
 							</aside>
 
 							<aside class="offer offer--orange offer--delivery">
-								<p class="offer__text">Доставка</p>
+								<h4 class="offer__title">Доставка</h4>
 
 								<a href="#" class="btn btn--opacity offer__btn">бесплатно</a>
 							</aside>
@@ -169,64 +175,88 @@
 						<header class="popular-goods__head">
 							<h1 class="title popular-goods__title">Популярные товары:</h1>
 
-							<a href="#" class="btn btn--red popular-goods__btn btn--popular">Все популярные товары</a>
+							<a href="#" class="btn btn--red popular-goods__btn">Все популярные товары</a>
 						</header>
 
 						<div class="popular-goods__container">
 							<aside class="product">
-								<a href="#" class="popular-goods__link">
+								<div class="product__container">
 									<figure class="product__preview">
-										<img src="" alt="Перфоратор BOSCH BFG 9000">
-
-										<b class="product__text">Перфоратор BOSCH BFG 9000</b>
+										<img src="img/product-1.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
 									</figure>
-								</a>
+
+									<div class="product__btn-container">
+										<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+
+										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+									</div>
+								</div>
+
+								<b class="product__text">Перфоратор BOSCH BFG 9000</b>
 
 								<span class="product__old-price">32500 Р.</span>
 
-								<button class="btn btn--red product__btn">25500 Р.</button>
+								<a href="#" class="btn btn--red product__btn">25500 Р.</a>
 							</aside>
 
 							<aside class="product">
-								<a href="#" class="popular-goods__link">
+								<div class="product__container">
 									<figure class="product__preview">
-										<img src="" alt="Перфоратор BOSCH BFG 3000">
-
-										<b class="product__text">Перфоратор BOSCH BFG 3000</b>
+										<img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
 									</figure>
-								</a>
+
+									<div class="product__btn-container">
+										<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+
+										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+									</div>
+								</div>
+
+								<b class="product__text">Перфоратор BOSCH BFG 3000</b>
 
 								<span class="product__old-price">22500 Р.</span>
 
-								<button class="btn btn--red product__btn">15500 Р.</button>
+								<a href="#" class="btn btn--red product__btn">15500 Р.</a>
 							</aside>
 
 							<aside class="product">
-								<a href="#" class="popular-goods__link">
+								<div class="product__container">
 									<figure class="product__preview">
-										<img src="" alt="Перфоратор BOSCH BFG 6000">
-
-										<b class="product__text"Перфоратор BOSCH BFG 6000></b>
+										<img src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
 									</figure>
-								</a>
+
+									<div class="product__btn-container">
+										<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+
+										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+									</div>
+								</div>
+
+								<b class="product__text">Перфоратор BOSCH BFG 6000</b>
 
 								<span class="product__old-price">30500 Р.</span>
 
-								<button class="btn btn--red product__btn">25500 Р.</button>
+								<a href="#" class="btn btn--red product__btn">25500 Р.</a>
 							</aside>
 
 							<aside class="product">
-								<a href="#" class="popular-goods__link">
+								<div class="product__container">
 									<figure class="product__preview new">
-										<img src="" alt="Перфоратор BOSCH BFG 2000">
-
-										<b class="product__text">Перфоратор BOSCH BFG 2000</b>
+										<img src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
 									</figure>
-								</a>
+
+									<div class="product__btn-container">
+										<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+
+										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+									</div>
+								</div>
+
+								<b class="product__text">Перфоратор BOSCH BFG 2000</b>
 
 								<span class="product__old-price"></span>
 
-								<button class="btn btn--red product__btn">12500 Р.</button>
+								<a href="#" class="btn btn--red product__btn">12500 Р.</a>
 							</aside>
 						</div>
 					</div>
@@ -468,6 +498,8 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="js/script.js"></script>
 	</body>
 </html>
 

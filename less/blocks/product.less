@@ -1,0 +1,126 @@
+.product {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex-basis: 220px;
+	max-width: 220px;
+	height: 318px;
+	box-sizing: border-box;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+
+	&:hover {
+		box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+
+		.product__preview {
+			display: none;
+		}
+
+		.product__btn-container {
+			display: flex;
+		}
+	}
+
+	&__btn-container {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 82px;
+	}
+
+	&__shopcard-btn {
+		.font("Cuprum", sans-serif; 0.875rem; 18px; 400; #ffffff);
+		position: relative;
+		min-width: 135px;
+		padding: 10px 0;
+		padding-left: 49px;
+		padding-right: 45px;
+		text-transform: uppercase;
+		box-sizing: border-box;
+		box-shadow: inset 0 -3px 0 #367315;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 12px;
+			width: 17px;
+			height: 16px;
+			background-image: @icon-basket;
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+			opacity: 0.5;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__tab-btn {
+		.font("Cuprum", sans-serif; 0.875rem; 18px; 400; @dark-blue);
+		min-width: 135px;
+		padding: 7px 0;
+		padding-left: 36px;
+		padding-right: 32px;
+		box-sizing: border-box;
+		text-transform: uppercase;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		width: 100%;
+		height: 164px;
+	}
+
+	&__text {
+		.font("PT Sans", sans-serif; 1.125rem; 18px; 700; #000000);
+		display: block;
+		width: 160px;
+	}
+
+	&__old-price {
+		.font("PT Sans", sans-serif; 1.0625rem; 18px; 700; #999999);
+		text-decoration: line-through;
+	}
+
+	&__btn {
+		.font("PT Sans", sans-serif; 1.0625rem; 18px; 700; #ffffff);
+		position: relative;
+		padding: 10px 0;
+		padding-left: 36px;
+		padding-right: 16px;
+		margin-bottom: 21px;
+		border-radius: 5px  0 0 5px;
+		text-transform: uppercase;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -38px;
+			border: 19px solid transparent;
+			border-left-color: @dark-red;
+		}
+
+		&:hover {
+			&::after {
+				border-left-color: darken(@dark-red, 2%);
+			}
+		}
+
+		&:active {
+			&::after {
+				border-left-color: darken(@dark-red, 4%);
+			}
+		}
+	}
+}
