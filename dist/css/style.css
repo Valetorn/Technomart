@@ -449,6 +449,9 @@ template {
   flex-basis: 940px;
   padding: 0 10px;
 }
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -457,6 +460,12 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100%;
   margin: 0 auto;
 }
 h1,
@@ -749,6 +758,7 @@ img {
   -webkit-box-pack: center;
           justify-content: center;
   width: 100%;
+  min-height: 278px;
   background-color: #f2f5f8;
 }
 .hero .inner {
@@ -907,7 +917,8 @@ img {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
@@ -946,6 +957,8 @@ img {
   text-decoration: none;
 }
 main {
+  -webkit-box-flex: 1;
+          flex: 1 0 auto;
   background-color: ##ffffff;
 }
 .facilities {
@@ -1183,6 +1196,7 @@ main {
           flex-direction: row;
   -webkit-box-pack: center;
           justify-content: center;
+  padding-bottom: 1px;
 }
 .popular-goods .inner {
   -webkit-box-orient: vertical;
@@ -1229,6 +1243,7 @@ main {
           flex-direction: row;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 .product {
@@ -1242,12 +1257,22 @@ main {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
-  flex-basis: 220px;
-  max-width: 220px;
-  height: 318px;
+  width: 220px;
+  min-height: 318px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
   text-align: center;
+}
+.product__preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .product:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
@@ -1369,4 +1394,102 @@ main {
 }
 .product__btn:active::after {
   border-left-color: #ec2331;
+}
+.popular-brands {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding-bottom: 65px;
+}
+.popular-brands .inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.popular-brands__head {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 89px;
+  margin-bottom: 20px;
+  background-color: #f7f3ec;
+}
+.popular-brands__title {
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+.popular-brands__btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  min-width: 253px;
+  margin-right: 24px;
+  padding: 10px 55px;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.popular-brands__container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.brand {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-basis: 220px;
+  height: 145px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+.brand:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+.brand:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.5;
+}
+.brand__link {
+  width: 100%;
+  height: 100%;
+}
+.brand__preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.main-footer {
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
 }
