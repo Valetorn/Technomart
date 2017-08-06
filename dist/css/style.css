@@ -1196,7 +1196,6 @@ main {
           flex-direction: row;
   -webkit-box-pack: center;
           justify-content: center;
-  padding-bottom: 1px;
 }
 .popular-goods .inner {
   -webkit-box-orient: vertical;
@@ -1215,7 +1214,7 @@ main {
           align-items: center;
   width: 100%;
   min-height: 89px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: #f7f3ec;
 }
 .popular-goods__title {
@@ -1492,4 +1491,177 @@ main {
 .main-footer {
   -webkit-box-flex: 0;
           flex: 0 0 auto;
+}
+.service {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 522px;
+  background-color: #f3f7f9;
+}
+.service .inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+}
+.service__content {
+  margin-top: 68px;
+  margin-bottom: 70px;
+}
+.service__title {
+  margin-bottom: 29px;
+  text-transform: uppercase;
+}
+.service__text {
+  width: 400px;
+  font-size: 0.8125rem;
+}
+.relay {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  width: 100%;
+}
+.relay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  flex-basis: 240px;
+}
+.relay__list::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 0;
+  bottom: -30px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: -2px 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.relay__item {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  width: 100%;
+  height: 61px;
+  background-color: #32425c;
+  box-sizing: border-box;
+}
+.relay__item:not(:last-child) {
+  border-bottom: 1px solid #293449;
+}
+.relay__item:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.relay__item:hover {
+  background-color: #29364b;
+}
+.relay__container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.relay__content-container {
+  flex-basis: 620px;
+  height: 100%;
+}
+.relay__content {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.relay__content:nth-child(1) .relay__text {
+  width: 275px;
+  margin-bottom: 30px;
+}
+.relay__content:not(.relay__content--active) {
+  display: none;
+}
+.relay__content::after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+.relay__content--delivery::after {
+  right: 0px;
+  bottom: -100px;
+  width: 468px;
+  height: 261px;
+  background-image: url(../img/delivery-car.png);
+}
+.relay__content--gurantee::after {
+  right: -20px;
+  bottom: -100px;
+  width: 389px;
+  height: 283px;
+  background-image: url(../img/gurantee.png);
+}
+.relay__content--credit::after {
+  right: -20px;
+  bottom: -100px;
+  width: 465px;
+  height: 285px;
+  background-image: url(../img/credit.png);
+}
+.relay__title {
+  text-transform: uppercase;
+}
+.relay__text {
+  width: 275px;
+  font-size: 0.8125rem;
+}
+.relay__text:nth-child(2) {
+  width: 380px;
+}
+.relay__btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  min-width: 195px;
+  padding: 10px 44px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.relay__toggle {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding-left: 22px;
+  text-align: left;
+}
+.relay__toggle--active {
+  background-color: #ffffff;
+  color: #32425c;
 }

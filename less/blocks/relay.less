@@ -1,0 +1,149 @@
+.relay {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	&__list {
+		.no-indents;
+		.no-list-style;
+		position: relative;
+		flex-basis: 240px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -30px;
+			right: 0;
+			bottom: -30px;
+			width: 1px;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 50%;
+			box-shadow: -2px 0 2px 1px rgba(0,0,0,0.2);
+		}
+	}
+
+	&__item {
+		.font("Cuprum", sans-serif; 1.3125rem; 30px; 700; #ffffff);
+		width: 100%;
+		height: 61px;
+		background-color: @dark-blue-h;
+		box-sizing: border-box;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #293449;
+		}
+
+		&:not(:first-child) {
+			border-top:  1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		&:hover {
+			background-color: darken(@dark-blue-h, 5%);
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__content-container {
+		flex-basis: 620px;
+		height: 100%;
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+
+		&:nth-child(1) {
+			.relay__text {
+				width: 275px;
+				margin-bottom: 30px;
+			}
+		}
+
+		&:not(&--active) {
+			display: none;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+		}
+
+		&--delivery {
+			&::after {
+				right: 0px;
+				bottom: -100px;
+				width: 468px;
+				height: 261px;
+				background-image: @delivery-car;
+			}
+		}
+
+		&--gurantee {
+			&::after {
+				right: -20px;
+				bottom: -100px;
+				width: 389px;
+				height: 283px;
+				background-image: @gurantee;
+			}
+		}
+
+		&--credit {
+			&::after {
+				right: -20px;
+				bottom: -100px;
+				width: 465px;
+				height: 285px;
+				background-image: @credit;
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__text {
+		width: 275px;
+		font-size: 0.8125rem;
+
+		&:nth-child(2) {
+			width: 380px;
+		}
+	}
+
+	&__btn {
+		.font("Cuprum", sans-serif; 0.875rem; 18px; 400; #ffffff);
+		min-width: 195px;
+		padding: 10px 44px;
+		text-transform: uppercase;
+		box-sizing: border-box;
+	}
+
+	&__toggle {
+		.font("Cuprum", sans-serif; 1.3125rem; 30px; 700; #ffffff);
+		width: 100%;
+		height: 100%;
+		padding-left: 22px;
+		text-align: left;
+
+		&--active {
+			background-color: #ffffff;
+			color: @dark-blue-h;
+		}
+	}
+}

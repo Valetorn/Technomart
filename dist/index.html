@@ -343,35 +343,45 @@
 					<div class="service__content">
 						<h3 class="service__title">Сервисы</h3>
 
-						<p class="text--small-black service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+						<p class="service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 					</div>
 
-					<aside class="slider">
-						<div class="slider__box-toggle">
-							<button class="slider__toggle toggle--active" id="toggle-1">Доставка</button>
+					<aside class="relay">
+						<div class="relay__container">
+							<ul class="relay__list">
+								<li class="relay__item">
+									<button class="btn relay__toggle relay__toggle--active" id="toggle-1">Доставка</button>
+								</li>
 
-							<button class="slider__toggle toggle--active" id="toggle-2">Гарантия</button>
+								<li class="relay__item">
+									<button class="btn relay__toggle" id="toggle-2">Гарантия</button>
+								</li>
 
-							<button class="slider__toggle toggle--active" id="toggle-3">Кредит</button>
-						</div>
+								<li class="relay__item">
+									<button class="btn relay__toggle" id="toggle-3">Кредит</button>
+								</li>
+							</ul>
 
-						<div class="slider__container">
-							<div class="slider__content" id="slider__content1">
-								<h2 class="slider__title">Доставка</h2>
+							<div class="relay__content-container">
+								<div class="relay__content relay__content--active relay__content--delivery" id="relay__content1">
+									<h2 class="relay__title">Доставка</h2>
 
-								<p class="text--small-black slider__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
-							</div>
+									<p class="relay__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br> поднимая его на ваш на этаж!</p>
+								</div>
 
-							<div class="slider__content" id="slider__content2">
-								<h2 class="slider__title">Гарантия</h2>
+								<div class="relay__content relay__content--gurantee" id="relay_content2">
+									<h2 class="relay__title">Гарантия</h2>
 
-								<p class="text--small-black slider__text">Гарантия Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-							</div>
+									<p class="relay__text">Гарантия Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгаранием,<br>  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+								</div>
 
-							<div class="slider__content" id="slider__content3">
-								<h2 class="slider__title">Кредит</h2>
+								<div class="relay__content relay__content--credit" id="relay__content3">
+									<h2 class="relay__title">Кредит</h2>
 
-								<p class="text--small-black slider__text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+									<p class="relay__text">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
+
+									<button class="btn btn--red relay__btn">Отправить заявку</button>
+								</div>
 							</div>
 						</div>
 					</aside>
