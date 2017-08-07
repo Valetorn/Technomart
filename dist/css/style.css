@@ -686,6 +686,7 @@ img {
   background-color: #ffffff;
 }
 .btn--red {
+  border-radius: 5px;
   background-color: #ee3643;
 }
 .btn--red:hover {
@@ -1664,4 +1665,114 @@ main {
 .relay__toggle--active {
   background-color: #ffffff;
   color: #32425c;
+}
+.info {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 536px;
+}
+.info .inner {
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.about {
+  flex-basis: 519px;
+  margin-top: 83px;
+}
+.about__title {
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.about__text {
+  margin-bottom: 24px;
+  font-size: 0.8125rem;
+}
+.about__text:nth-of-type(2) {
+  width: 390px;
+  margin-bottom: 20px;
+}
+.about__text--list {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 43px;
+}
+.about__item {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+.about__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.about__item::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 2px;
+  margin-right: 11px;
+  background-color: #e9292a;
+}
+.about__btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  min-width: 220px;
+  padding: 12px 40px 10px 41px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.contacts {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-basis: 300px;
+  margin-top: 83px;
+}
+.contacts__title {
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.contacts__text {
+  margin-bottom: 30px;
+  font-size: 0.8125rem;
+}
+.contacts__btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  min-width: 300px;
+  padding: 12px 59px 10px 63px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.map {
+  width: 300px;
+  height: 158px;
+  margin-bottom: 40px;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }

@@ -1,0 +1,54 @@
+.about {
+	flex-basis: 519px;
+	margin-top: 83px;
+
+	&__title {
+		margin-bottom: 28px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: 24px;
+		font-size: 0.8125rem;
+
+		&:nth-of-type(2) {
+			width: 390px;
+			margin-bottom: 20px;
+		}
+
+		&--list {
+		.font("Cuprum", sans-serif; 1.125rem; 20px; 400; #000000);
+		}
+	}
+
+	&__list {
+		.no-list-style;
+		margin-bottom: 43px;
+	}
+
+	&__item {
+		.font("Cuprum", sans-serif; 1.125rem; 20px; 400; #000000);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 25px;
+			height: 2px;
+			margin-right: 11px;
+			background-color: @red;
+		}
+	}
+
+	&__btn {
+		.font("Cuprum", sans-serif; 0.875rem; 18px; 400; #ffffff);
+		min-width: 220px;
+		padding: 12px 40px 10px 41px;
+		text-transform: uppercase;
+		box-sizing: border-box;
+	}
+}
