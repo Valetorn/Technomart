@@ -1,0 +1,40 @@
+.secondly-menu {
+	.no-list-style;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	box-sizing: border-box;
+
+	&__link {
+		.font("Cuprum", sans-serif; 1.125rem; 24px; 400; #f1f5f7);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:active {
+			text-decoration: none;
+			opacity: 0.5;
+		}
+	}
+
+	&--top {
+		margin-bottom: 34px;
+	}
+
+	&--bottom {
+		.secondly-menu__item {
+
+			&:first-child {
+				padding-left: 23px;
+			}
+		}
+
+		.secondly-menu__link {
+			color: @gold;
+		}
+	}
+}

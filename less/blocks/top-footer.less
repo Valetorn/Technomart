@@ -1,0 +1,26 @@
+.top-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	min-height: 193px;
+	background-color: @dark-blue-h;
+
+	&__container {
+		&--left {
+			display: flex;
+			flex-direction: column;
+			max-width: 380px;
+		}
+
+		&--right {
+			flex-basis: 548px;
+			margin-top: 36px;
+		}
+	}
+
+	&__text {
+		.font("Cuprum", sans-serif; 1.125rem; 24px; 400; #f1f5f7);
+		width: 325px;
+	}
+}
