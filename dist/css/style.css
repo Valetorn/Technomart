@@ -965,7 +965,7 @@ img {
 main {
   -webkit-box-flex: 1;
           flex: 1 0 auto;
-  background-color: ##ffffff;
+  background-color: #ffffff;
 }
 .facilities {
   display: -webkit-box;
@@ -1865,4 +1865,109 @@ main {
 }
 .secondly-menu--bottom .secondly-menu__link {
   color: #ffd180;
+}
+.bottom-footer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 107px;
+  background-color: #293449;
+}
+.copyright {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  flex-basis: 330px;
+  margin-top: 37px;
+}
+.copyright__text {
+  width: 240px;
+}
+.social {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  flex-basis: 180px;
+  margin-top: 37px;
+}
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 150px;
+  font-size: 0;
+}
+.social__item {
+  width: 41px;
+  height: 41px;
+  background-color: #171d28;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 48% 50%;
+}
+.social__item--vk {
+  background-image: url(../img/icon-vk.png);
+}
+.social__item--fb {
+  background-image: url(../img/icon-facebook.png);
+}
+.social__item--inst {
+  background-image: url(../img/icon-instagramm.png);
+}
+.social__item:hover {
+  background-color: #ee3643;
+}
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.feedback {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex-basis: 330px;
+  margin-top: 37px;
+}
+.feedback__container {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 310px;
+}
+.feedback__write-us,
+.feedback__developer {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  flex-basis: 140px;
+  text-align: left;
+}
+.feedback__developer {
+  text-align: right;
+}
+.feedback__link {
+  color: #ffd180;
+  text-decoration: none;
+}
+.feedback__link:hover {
+  text-decoration: underline;
+}
+.feedback__link:active {
+  color: #ee3643;
+  text-decoration: none;
 }

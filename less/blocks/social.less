@@ -1,0 +1,46 @@
+.social {
+	display: flex;
+	justify-content: flex-start;
+	flex-basis: 180px;
+	margin-top: 37px;
+
+	&__list {
+		.no-list-style;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-basis: 150px;
+		font-size: 0;
+	}
+
+	&__item {
+		width: 41px;
+		height: 41px;
+		background-color: darken(@dark-blue, 10%);
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: 48% 50%;
+
+		&--vk {
+			background-image: @icon-vk;
+		}
+
+		&--fb {
+			background-image: @icon-fb;
+		}
+
+		&--inst {
+			background-image: @icon-inst;
+		}
+
+		&:hover {
+			background-color: @dark-red;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
