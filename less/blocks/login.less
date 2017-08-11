@@ -1,8 +1,111 @@
 .login {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	flex-basis: 300px;
+
+	&__enter-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__user {
+		.font("Cuprum", sans-serif; 1.3125rem; 45px; 400; #000000);
+		position: relative;
+		width: 100%;
+		margin-bottom: 7px;
+		padding-left: 48px;
+		box-sizing: border-box;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 31%;
+			left: 13px;
+			width: 20px;
+			height: 18px;
+			background-image: @icon-user;
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+			opacity: 0.5;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__logout {
+		position: absolute;
+		top: 31%;
+		right: 10px;
+		width: 20px;
+		height: 17px;
+		background-image: @icon-logout;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+		font-size: 0;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__person-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		max-width: 240px;
+		box-sizing: border-box;
+	}
+
+	&__person-link {
+		.font("Cuprum", sans-serif; 1rem; 18px; 400; @dark-blue-h);
+
+		&:nth-child(odd) {
+			&::after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 4px;
+				height: 4px;
+				margin-left: 13px;
+				background-color: @dark-blue-h;
+				border-radius: 50%;
+			}
+		}
+
+		&:hover {
+			color: @red;
+		}
+
+		&:active {
+			color: @dark-blue-h;
+			opacity: 0.5;
+		}
+	}
+
+	&__my-order {
+		padding-left: 11px;
+	}
 
 	&__enter, &__registry {
 		.font("Cuprum", sans-serif; 1.3125rem; 45px; 400; #000000);
