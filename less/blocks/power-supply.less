@@ -1,0 +1,41 @@
+.power-supply {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 75px;
+
+	input {
+		display: none;
+
+		&:checked + .power-supply__label::before {
+			background-color: @grey-check;
+			background-clip: content-box;
+		}
+	}
+
+	&__list {
+		.no-list-style;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 25px;
+			height: 25px;
+			margin-right: 10px;
+			padding: 5px;
+			border: 3px solid @grey-check;
+			border-radius: 50%;
+			box-sizing: border-box;
+		}
+	}
+}
