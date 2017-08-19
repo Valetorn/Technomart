@@ -24,7 +24,16 @@
 
 	&--white-grey-border {
 		border: 1px solid @grey-hr;
+		border-radius: 5px;
 		background-color: transparent;
+
+		&:hover {
+			border-color: @grey-pagination;
+		}
+
+		&:active {
+			border-color: @dark-red;
+		}
 	}
 
 	&--red {
@@ -110,5 +119,42 @@
 		box-sizing: border-box;
 		background-color: @dark-red;
 		border: 5px solid #ffffff;
+	}
+
+	&--sort {
+		display: inline-block;
+		vertical-align: middle;
+		border: 5px solid transparent;
+
+		&:first-child {
+			border-bottom: 9px solid @grey-sort;
+		}
+
+		&:last-child {
+			vertical-align: baseline;
+			border-top: 9px solid @grey-sort;
+		}
+
+		&:not(&-active) {
+			&:hover {
+				&:first-child {
+					border-bottom-color: #000000;
+				}
+
+				&:last-child {
+					border-top-color: #000000;
+				}
+			}
+		}
+
+		&-active {
+			&:first-child {
+				border-bottom-color: @dark-red;
+			}
+
+			&:last-child {
+				border-top-color: @dark-red;
+			}
+		}
 	}
 }
