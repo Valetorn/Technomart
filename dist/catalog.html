@@ -48,7 +48,7 @@
 					</div>
 
 					<div class="communication">
-						<button class="btn phone">+7 (812) 555-05-55</button>
+						<a href="tel:+78125550555" class="btn phone">+7 (812) 555-05-55</a>
 
 						<p class="communication__text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 					</div>
@@ -189,7 +189,7 @@
 										</li>
 
 										<li class="manufacturers__item">
-											<input type="checkbox" id="dewalt" value="dewalt">
+											<input type="checkbox" id="dewalt" value="dewalt" disabled>
 
 											<label for="dewalt" class="filter__label manufacturers__label">Dewalt</label>
 										</li>
@@ -261,7 +261,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -281,7 +281,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -301,7 +301,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -321,7 +321,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -341,7 +341,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -361,7 +361,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -381,7 +381,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -401,7 +401,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -421,7 +421,7 @@
 										</figure>
 
 										<div class="product__btn-container">
-											<a href="#" class="btn btn--green product__shopcard-btn">Купить</a>
+											<a href="#" class="btn btn--green product__shopcard-btn" id="open-buy">Купить</a>
 
 											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
 										</div>
@@ -456,6 +456,15 @@
 							</footer>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section class="service">
+				<div class="inner">
+					<h3 class="service__title">Пара слов о перфораторах</h3>
+
+					<p class="service__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+					Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
 				</div>
 			</section>
 		</main>
@@ -557,5 +566,27 @@
 				</div>
 			</div>
 		</footer>
+
+		<section class="popup hidden" id="buy">
+			<button class="btn btn--close popup__close-btn" id="close-feedback">Закрыть</button>
+
+			<div class="popup__inner">
+				<div class="popup__content">
+					<p class="popup__text">Товар добавлен в корзину!</p>
+				</div>
+			</div>
+
+			<footer class="popup__footer">
+				<div class="popup__inner">
+					<a href="#" class="btn btn--red popup__btn popup__btn--order">Оформить заказ</a>
+
+					<a href="#" class="btn btn--red popup__btn popup__btn--continue">Продолжить покупки</a>
+				</div>
+			</footer>
+		</section>
+
+		<script src="js/utils.js"></script>
+
+		<script src="js/script.js"></script>
 	</body>
 </html>

@@ -1,51 +1,65 @@
 'use strict';
 
-var slider = document.querySelector('#slider');
-var slides = slider.querySelectorAll('.slider__slide');
-var slideControls = slider.querySelectorAll('#slider__controls .slider__control');
-var currentSlide = 0;
- var isKeyboardEvent = function (evt) {
-	return typeof evt.keyCode !== 'undefined';
+var openFeedback = document.querySelector('#open-feedback');
+var openBuy = document.querySelector('#open-buy');
+var buy = document.querySelector('#buy');
+var feedback = document.querySelector('#feedback');
+var closeFeedback = feedback.querySelector('#close-feedback');
+var form = feedback.querySelector('form');
+var login = form.querySelector('[name=login]');
+var email = form.querySelector('[name=email]');
+var comment = form.querySelector('[name=comment]');
+var storage = localStorage.getItem('login');
+
+console.log(login);
+
+var openPopup = function () {
+	feedback.classList.toggle('hidden');
+	if(storage) {
+		login.value = storage;
+		email.focus();
+	} else {
+		login.focus();
+	}
+};
+var closePopup = function () {
+	feedback.classList.toggle('hidden');
+	feedback.classList.remove('error');
 };
 
-slider.addEventListener('click', function (event) {
-		var sliderBtnSwitch = event.target;
-		if(String(sliderBtnSwitch.id).match('slide-next')) {
-			nextSlide();
-		} else {
-			prevSlide();
-		}
+openFeedback.addEventListener('click', function (evt) {
+	evt.preventDefault();
+	openPopup();
 });
-slider.addEventListener('keydown', function (event) {
-	if (isKeyboardEvent(event) && event.keyCode === 13) {
-		event.preventDefault();
-		var sliderBtnSwitch = event.target;
-		if(String(sliderBtnSwitch.id).match('slide-next')) {
-			nextSlide();
-		} else {
-			prevSlide();
+openFeedback.addEventListener('keydown', function (evt) {
+	if(utils.isActivationEvent(evt)) {
+		evt.preventDefault();
+		openPopup();
+	}
+});
+closeFeedback.addEventListener('click', function (evt) {
+	closePopup();
+});
+closeFeedback.addEventListener('keydown', function (evt) {
+	if(utils.isActivationEvent(evt)) {
+		evt.preventDefault();
+		closePopup();
+	}
+});
+form.addEventListener('submit', function (evt) {
+	if(!login.value || !email.value) {
+		evt.preventDefault();
+		feedback.classList.remove('error');
+		feedback.offsetWidth;
+		feedback.classList.add('error');
+	} else {
+		localStorage.setItem('login', login.value);
+	}
+});
+window.addEventListener('keydown', function (evt) {
+	if(utils.isDeactivationEvent(evt)) {
+		if(!feedback.classList.contains('hidden')) {
+			closePopup();
 		}
 	}
 });
-
-var nextSlide = function () {
-		slides[currentSlide].style.display = 'none';
-		slideControls[currentSlide].style.borderWidth = '5px';
-		currentSlide++;
-		if (currentSlide >= slides.length) {
-			currentSlide = 0;
-		}
-		slides[currentSlide].style.display = 'block';
-		slideControls[currentSlide].style.borderWidth = '2px';
-}
-var prevSlide = function () {
-		slides[currentSlide].style.display = 'none';
-		slideControls[currentSlide].style.borderWidth = '5px';
-		currentSlide--;
-		if (currentSlide < 0) {
-			currentSlide = slides.length - 1;
-		}
-		slides[currentSlide].style.display = 'block';
-		slideControls[currentSlide].style.borderWidth = '2px';
-}
-slideControls[currentSlide].style.borderWidth = '2px';

@@ -10,6 +10,10 @@
 			background-color: @grey-check;
 			background-clip: content-box;
 		}
+
+		&:disabled + .power-supply__label {
+			opacity: 0.5;
+		}
 	}
 
 	&__title {
@@ -40,6 +44,12 @@
 			border: 3px solid @grey-check;
 			border-radius: 50%;
 			box-sizing: border-box;
+		}
+
+		&:hover {
+			&::before {
+				border-color: darken(@grey-check, 10%);
+			}
 		}
 	}
 }

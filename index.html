@@ -45,7 +45,7 @@
 					</div>
 
 					<div class="communication">
-						<button class="btn phone">+7 (812) 555-05-55</button>
+						<a href="tel:+78125550555" class="btn phone">+7 (812) 555-05-55</a>
 
 						<p class="communication__text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 					</div>
@@ -130,7 +130,7 @@
 
 					<div class="facilities__block facilities__block--bottom">
 						<aside class="slider" id="slider">
-							<div class="slider__slide slider__slide-1" id="slider__slide1">
+							<div class="slider__slide slider__slide-1 show" id="slider__slide1">
 								<div class="slider__content">
 									<h2 class="slider__title">Перфораторы</h2>
 
@@ -159,9 +159,9 @@
 							<button class="btn btn--arrow btn--arrow-next slider__arrow slider__arrow--next" id="slide-next"></button>
 
 							<div class="slider__controls-container" id="slider__controls">
-								<button class="btn btn--slider-control slider__control"></button>
+								<button class="btn slider__control slider__control--active"></button>
 
-								<button class="btn btn--slider-control slider__control"></button>
+								<button class="btn slider__control"></button>
 							</div>
 
 							<a href="#" class="btn btn--red slider__btn">Открыть каталог</a>
@@ -360,9 +360,9 @@
 						<p class="service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 					</div>
 
-					<aside class="relay">
+					<aside class="relay" id="relay">
 						<div class="relay__container">
-							<ul class="relay__list">
+							<ul class="relay__list" id="relay-toggles">
 								<li class="relay__item">
 									<button class="btn relay__toggle relay__toggle--active" id="toggle-1">Доставка</button>
 								</li>
@@ -429,7 +429,7 @@
 
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1500226146295" width="300" height="158" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
 
-						<a href="#" class="btn btn--red contacts__btn">Заблудились? НАПИШИТЕ НАМ!</a>
+						<a href="#" class="btn btn--red contacts__btn" id="open-feedback">Заблудились? НАПИШИТЕ НАМ!</a>
 					</section>
 				</div>
 			</section>
@@ -531,7 +531,45 @@
 			</div>
 		</footer>
 
+		<section class="popup hidden" id="feedback">
+			<button class="btn btn--close popup__close-btn" id="close-feedback">Закрыть</button>
+
+			<div class="popup__inner">
+				<form action="#" class="popup__form" id="popup-form">
+					<div class="popup__input-container">
+						<label for="popup-name" class="popup__label">Ваше имя:</label>
+
+						<input type="text" name="login" id="popup-name" class="popup__input popup__input--text" placeholder="Представтесь, пожалуйста">
+					</div>
+
+					<div class="popup__input-container">
+						<label for="popup-email" class="popup__label">Ваш e-mail:</label>
+
+						<input type="email" name="email" id="popup-email" class="popup__input popup__input--text" placeholder="Для отправки ответа">
+					</div>
+
+					<div class="popup__input-container">
+						<label for="popup-comment" class="popup__label">Текст письма:</label>
+
+						<textarea name="comment" class="popup__input popup__input--textarea" id="popup-comment" placeholder="В свободной форме"></textarea>
+					</div>
+				</form>
+			</div>
+
+			<footer class="popup__footer">
+				<div class="popup__inner">
+					<button type="submit" form="popup-form" name="popup-sub" id="popup-sub" class="btn btn--red popup__btn popup__btn--sub">Отправить</button>
+				</div>
+			</footer>
+		</section>
+
+		<script src="js/utils.js"></script>
+
 		<script src="js/script.js"></script>
+
+		<script src="js/toDoRelay.js"></script>
+
+		<script src="js/toDoSlide.js"></script>
 	</body>
 </html>
 

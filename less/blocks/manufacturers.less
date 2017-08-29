@@ -21,6 +21,9 @@
 			box-shadow: 0 2px 0 0 #ffffff,
 									inset 0 -2px 0 0 #ffffff;
 		}
+		&:disabled + .manufacturers__label {
+			opacity: 0.5;
+		}
 	}
 
 	&__title {
@@ -54,6 +57,12 @@
 			border: 2px solid @grey-check;
 			border-radius: 5px;
 			box-sizing: border-box;
+		}
+
+		&:hover {
+			&::before {
+				border-color: darken(@grey-check, 10%);
+			}
 		}
 	}
 }
