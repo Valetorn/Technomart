@@ -192,7 +192,7 @@
 							<a href="#" class="btn btn--red popular-goods__btn">Все популярные товары</a>
 						</header>
 
-						<div class="popular-goods__container">
+						<div class="popular-goods__container" id="products-container">
 							<aside class="product">
 								<div class="product__container">
 									<figure class="product__preview">
@@ -563,13 +563,35 @@
 			</footer>
 		</section>
 
+		<section class="popup hidden" id="buy">
+			<button class="btn btn--close popup__close-btn" id="close-buy">Закрыть</button>
+
+			<div class="popup__inner">
+				<div class="popup__content">
+					<p class="popup__text">Товар добавлен в корзину!</p>
+				</div>
+			</div>
+
+			<footer class="popup__footer">
+				<div class="popup__inner">
+					<a href="#" class="btn btn--red popup__btn popup__btn--order">Оформить заказ</a>
+
+					<button class="btn btn--white popup__btn popup__btn--continue" id="continueShoping">Продолжить покупки</button>
+				</div>
+			</footer>
+		</section>
+
 		<script src="js/utils.js"></script>
 
-		<script src="js/script.js"></script>
+		<script src="js/popup.js"></script>
 
-		<script src="js/toDoRelay.js"></script>
+		<script src="js/openFeedback.js"></script>
 
-		<script src="js/toDoSlide.js"></script>
+		<script src="js/toBuy.js"></script>
+
+		<script src="js/toRelay.js"></script>
+
+		<script src="js/toSlide.js"></script>
 	</body>
 </html>
 

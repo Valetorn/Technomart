@@ -27,6 +27,30 @@
 		padding: 0 10px;
 	}
 
+	&__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-top: 68px;
+		padding-bottom: 68px;
+	}
+
+	&__text {
+		.font("Cuprum", sans-serif; 1.875rem; 18px; 400; #000000);
+
+		&::before {
+			content: '';
+			width: 66px;
+			height: 66px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 34px;
+			background-image: @success;
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+		}
+	}
+
 	&__form {
 		display: flex;
 		flex-direction: row;
@@ -111,6 +135,12 @@
 	&__footer {
 		padding-bottom: 37px;
 		background-color: @grey-write-us;
+
+		.popup__inner {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 
 	&__btn {
@@ -121,6 +151,21 @@
 
 		&--sub {
 			width: 100%;
+		}
+
+		&--order, &--continue {
+			flex-basis: 220px;
+		}
+
+		&--order {
+			display: block;
+			text-align: center;
+		}
+
+		&--continue {
+			color: #000000;
+			border-radius: 5px;
+			font-weight: 700;
 		}
 	}
 }

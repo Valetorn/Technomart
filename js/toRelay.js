@@ -1,6 +1,6 @@
 'use strict';
 
-var toDoRelay = ( function () {
+var toRelay = ( function () {
 	var relay = document.querySelector('#relay');
 	var relayToggles = relay.querySelectorAll('#relay-toggles .relay__toggle');
 	var relayContent = relay.querySelectorAll('.relay__content-container div');

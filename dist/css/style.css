@@ -2754,6 +2754,35 @@ main {
   margin: 0 auto;
   padding: 0 10px;
 }
+.popup__content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  margin-top: 68px;
+  padding-bottom: 68px;
+}
+.popup__text {
+  font-family: "Cuprum", sans-serif;
+  font-size: 1.875rem;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+.popup__text::before {
+  content: '';
+  width: 66px;
+  height: 66px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 34px;
+  background-image: url(../img/success.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
 .popup__form {
   display: -webkit-box;
   display: flex;
@@ -2859,6 +2888,15 @@ main {
   padding-bottom: 37px;
   background-color: #f1f1f1;
 }
+.popup__footer .popup__inner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
 .popup__btn {
   font-family: "PT Sans", sans-serif;
   font-size: 0.875rem;
@@ -2871,4 +2909,17 @@ main {
 }
 .popup__btn--sub {
   width: 100%;
+}
+.popup__btn--order,
+.popup__btn--continue {
+  flex-basis: 220px;
+}
+.popup__btn--order {
+  display: block;
+  text-align: center;
+}
+.popup__btn--continue {
+  color: #000000;
+  border-radius: 5px;
+  font-weight: 700;
 }

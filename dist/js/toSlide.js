@@ -1,6 +1,6 @@
 'use strict';
 
-var toDoSlide = ( function () {
+var toSlide = ( function () {
 	var slider = document.querySelector('#slider');
 	var slides = slider.querySelectorAll('.slider__slide');
 	var slideControls = slider.querySelectorAll('#slider__controls .slider__control');
