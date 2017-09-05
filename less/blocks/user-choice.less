@@ -1,4 +1,5 @@
 .user-choice {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -59,5 +60,110 @@
 		&:active {
 			opacity: 0.5;
 		}
+	}
+
+	&__purchases {
+		position: absolute;
+		right: 0;
+		top: 50px;
+		width: 450px;
+		background-color: #ffffff;
+		box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+		z-index: 100;
+		box-sizing: border-box;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			left: 0;
+			right: 0;
+			height: 10px;
+			background-color: transparent;
+		}
+	}
+
+	&__inner {
+		width: 350px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	&__text {
+		.font("Cuprum", sans-serif; 1.875rem; 18px; 400; #000000);
+		padding: 30px 0;
+		text-align: center;
+	}
+
+	&__table {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&:not(&--head) {
+			background-color: lighten(@dark-blue-h, 50%);
+
+			&:nth-child(odd) {
+				background-color: lighten(@dark-blue-h, 30%);
+			}
+
+			&:hover {
+				background-color: lighten(@dark-blue-h, 20%);
+			}
+		}
+
+		&--head {
+			padding: 15px 0;
+			background-color: @light-grey;
+		}
+
+		&:not(&--head) {
+			padding: 10px 0;
+		}
+	}
+
+	&__cell {
+		.font("PT Sans", sans-serif; 1.0625rem; 18px; 700; #ffffff);
+		flex-basis: 20%;
+		text-align: center;
+
+		&:first-child {
+			flex-basis: 60%;
+		}
+
+		&:not(.user-choice__head) {
+			&:last-child {
+				color: @red;
+			}
+		}
+	}
+
+	&__head {
+		.font("Cuprum", sans-serif; 1.125rem; 18px; 700; #000000);
+	}
+
+	&__footer {
+		padding: 20px 0;
+		background-color: @grey-write-us;
+
+		.user-choice__inner {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__clean-btn {
+		.font("PT Sans", sans-serif; 0.875rem; 18px; 400; #ffffff);
+		flex-basis: 160px;
+		margin: auto 0;
+		min-height: 30px;
+		text-transform: uppercase;
 	}
 }
