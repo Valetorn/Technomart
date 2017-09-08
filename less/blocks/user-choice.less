@@ -66,7 +66,7 @@
 		position: absolute;
 		right: 0;
 		top: 50px;
-		width: 450px;
+		width: 650px;
 		background-color: #ffffff;
 		box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
 		z-index: 100;
@@ -84,7 +84,7 @@
 	}
 
 	&__inner {
-		width: 350px;
+		width: 400px;
 		margin: 0 auto;
 		padding: 0 10px;
 	}
@@ -96,16 +96,11 @@
 	}
 
 	&__table {
-		display: flex;
-		flex-direction: column;
 		width: 100%;
+		border-collapse: collapse;
 	}
 
 	&__row {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
 		&:not(&--head) {
 			background-color: lighten(@dark-blue-h, 50%);
 
@@ -119,29 +114,18 @@
 		}
 
 		&--head {
-			padding: 15px 0;
+			height: 50px;
 			background-color: @light-grey;
 		}
 
 		&:not(&--head) {
-			padding: 10px 0;
+			height: 40px;
 		}
 	}
 
 	&__cell {
 		.font("PT Sans", sans-serif; 1.0625rem; 18px; 700; #ffffff);
-		flex-basis: 20%;
 		text-align: center;
-
-		&:first-child {
-			flex-basis: 60%;
-		}
-
-		&:not(.user-choice__head) {
-			&:last-child {
-				color: @red;
-			}
-		}
 	}
 
 	&__head {
@@ -165,5 +149,40 @@
 		margin: auto 0;
 		min-height: 30px;
 		text-transform: uppercase;
+	}
+
+	&__del-btn {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 20px;
+		height: 20px;
+		font-size: 0;
+
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			top: 40%;
+			left: 10%;
+			right: 10%;
+			height: 3px;
+			background-color: #ffffff;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:hover {
+			transform: scale(1.5);
+		}
+
+		&:active {
+			transform: scale(1);
+		}
 	}
 }

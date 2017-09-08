@@ -31,9 +31,19 @@
 					<div class="user-choice">
 						<a href="#" class="user-choice__tab user-choice__link">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
 
-						<a href="#" class="user-choice__shopping-card user-choice__shopping-card--active user-choice__link">Корзина: <span class="user-choice__counter" id="shopping-card-counter">10</span></a>
+						<a href="#" class="user-choice__shopping-card user-choice__link" id="checkout">Корзина: <span class="user-choice__counter" id="shopping-card-counter">0</span></a>
 
 						<a href="#" class="btn btn--green user-choice__btn user-choice__link">Оформить заказ</a>
+
+						<div class="user-choice__purchases hidden">
+							<div class="user-choice__content" id="shopingcard-content"></div>
+
+							<footer class="user-choice__footer">
+								<div class="user-choice__inner">
+									<button class="btn btn--red user-choice__clean-btn" id="clear_cart">Очистить корзину</button>
+								</div>
+							</footer>
+						</div>
 					</div>
 				</div>
 			</section>

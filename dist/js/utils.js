@@ -12,6 +12,10 @@ var utils = (function () {
     },
     isDeactivationEvent: function (evt) {
       return isKeyboardEvent(evt) && evt.keyCode === ESCAPE_KEY_CODE;
-    }
+		},
+		findAncestor: function (el, parent) {
+			while ((el = el.parentElement) && !el.matches(parent));
+			return el;
+		}
   };
 })();
