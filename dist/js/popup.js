@@ -16,7 +16,7 @@ var popup = ( function () {
 			popup.offsetWidth;
 			popup.classList.add(animation);
 		},
-		isPopupOpen:function (popup) {
+		isPopupOpen: function (popup) {
 			if(popup.classList.contains('hidden')) {
 				return false;
 			} else {

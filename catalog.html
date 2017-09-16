@@ -31,7 +31,7 @@
 					<div class="user-choice">
 						<a href="#" class="user-choice__tab user-choice__link">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
 
-						<a href="#" class="user-choice__shopping-card user-choice__link" id="checkout">Корзина: <span class="user-choice__counter" id="shopping-card-counter">0</span></a>
+						<a href="#" class="user-choice__shopping-card  user-choice__link" id="checkout">Корзина: <span class="user-choice__counter" id="shopping-card-counter">0</span></a>
 
 						<a href="#" class="btn btn--green user-choice__btn user-choice__link">Оформить заказ</a>
 
@@ -155,16 +155,20 @@
 								<section class="price">
 									<h4 class="price__title filter__topic">Цена:</h4>
 
-									<div class="range">
+									<div class="range" id="range">
 										<div class="range__box">
 											<div class="range__line">
-												<div class="range__subline"></div>
+												<div class="range__subline">
+													<button type="button" class="btn range__btn range__btn--min" id="range-min"></button>
+
+													<button type="button" class="btn range__btn range__btn--max" id="range-max"></button>
+												</div>
 											</div>
 										</div>
 
 										<div class="range__cost-container">
 											<label for="range-cost-min" class="range__label">0
-												<input type="text" name="range-cost-min" id="range-cost-min" value="0" class="range__cost range__cost--min">
+												<input type="text" name="range-cost-min" id="range-cost-min" value="100" class="range__cost range__cost--min">
 											</label>
 
 											<label for="range-cost-max" class="range__label">3000
@@ -264,7 +268,7 @@
 							</header>
 
 							<div class="goods__products-container" id="products-container">
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -284,7 +288,7 @@
 									<a href="#" class="btn btn--red product__btn">15500 Р.</a>
 								</aside>
 
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -304,7 +308,7 @@
 									<a href="#" class="btn btn--red product__btn">25500 Р.</a>
 								</aside>
 
-								<aside class="product new">
+								<aside class="product new" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview new">
 											<img src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -324,7 +328,7 @@
 									<a href="#" class="btn btn--red product__btn">12500 Р.</a>
 								</aside>
 
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -344,7 +348,7 @@
 									<a href="#" class="btn btn--red product__btn">15500 Р.</a>
 								</aside>
 
-								<aside class="product new">
+								<aside class="product new" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -364,7 +368,7 @@
 									<a href="#" class="btn btn--red product__btn">25500 Р.</a>
 								</aside>
 
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -384,7 +388,7 @@
 									<a href="#" class="btn btn--red product__btn">12500 Р.</a>
 								</aside>
 
-								<aside class="product new">
+								<aside class="product new" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -404,7 +408,7 @@
 									<a href="#" class="btn btn--red product__btn">15500 Р.</a>
 								</aside>
 
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -424,7 +428,7 @@
 									<a href="#" class="btn btn--red product__btn">25500 Р.</a>
 								</aside>
 
-								<aside class="product">
+								<aside class="product" tabindex="0">
 									<div class="product__container">
 										<figure class="product__preview">
 											<img src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -600,5 +604,7 @@
 		<script src="js/popup.js"></script>
 
 		<script src="js/toBuy.js"></script>
+
+		<script src="js/toRange.js"></script>
 	</body>
 </html>

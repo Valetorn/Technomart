@@ -139,6 +139,12 @@ var toBuy = (function () {
 			openCart(evt);
 		}
 	});
+	document.querySelector('#checkout').addEventListener('keydown', function (evt) {
+		if(utils.isActivationEvent(evt)) {
+			document.querySelector('.user-choice__purchases').classList.remove('hidden');
+			openCart(evt);
+		}
+	});
 	document.querySelector('.user-choice').addEventListener('mouseleave', function (evt) {
 		document.querySelector('.user-choice__purchases').classList.add('hidden');
 		openCart(evt);
@@ -146,8 +152,19 @@ var toBuy = (function () {
 	cartCont.addEventListener('click', function (evt) {
 		delProduct(evt);
 	});
+	cartCont.addEventListener('keydown', function (evt) {
+		if(utils.isActivationEvent(evt)) {
+			delProduct(evt);
+		}
+	});
 	document.getElementById('clear_cart').addEventListener('click', function(evt) {
 		clearCart();
+	});
+	document.getElementById('clear_cart').addEventListener('keydown', function(evt) {
+		if(utils.isActivationEvent(evt)) {
+			evt.preventDefault();
+			clearCart();
+		}
 	});
 	productsContainer.addEventListener('click', function (evt) {
 		openBuy(evt);
@@ -155,6 +172,7 @@ var toBuy = (function () {
 	productsContainer.addEventListener('keydown', function (evt) {
 		if(utils.isActivationEvent(evt)) {
 			openBuy(evt);
+			continueShoping.focus();
 		}
 	});
 	closeBuy.addEventListener('click', function (evt) {
@@ -179,6 +197,13 @@ var toBuy = (function () {
 		if(utils.isDeactivationEvent(evt)) {
 			if(popup.isPopupOpen(buy)) {
 				popup.closePopup(buy);
+			}
+		}
+	});
+	window.addEventListener('keydown', function (evt) {
+		if(utils.isDeactivationEvent(evt)) {
+			if(popup.isPopupOpen(document.querySelector('.user-choice__purchases'))) {
+				popup.closePopup(document.querySelector('.user-choice__purchases'));
 			}
 		}
 	});

@@ -22,30 +22,39 @@
 	&__subline {
 		position: absolute;
 		left: 0;
-		right: 12%;
+		right: 0;
 		height: 100%;
 		background-color: @green-line;
 
-		&::before, &::after {
-			content: '';
-			position: absolute;
-			top: -10px;
-			width: 20px;
-			height: 20px;
-			background-color: @dark-grey;
-			box-shadow: 0 2px 0 rgba(0, 1, 1, 0.14);
-			border: 8px solid #ffffff;
-			border-radius: 50%;
-			box-sizing: border-box;
-			cursor: pointer;
-		}
+	}
 
-		&::before {
+	&__btn {
+		position: absolute;
+		top: -10px;
+		width: 20px;
+		height: 20px;
+		background-color: @dark-grey;
+		box-shadow: 0 2px 0 rgba(0, 1, 1, 0.14);
+		border: 8px solid #ffffff;
+		border-radius: 50%;
+		box-sizing: border-box;
+		cursor: pointer;
+		outline: none;
+
+		&--min {
 			left: 0;
 		}
 
-		&::after {
+		&--max {
 			right: 0;
+		}
+
+		&:hover {
+			background-color: @dark-red;
+		}
+
+		&:active {
+			background-color: @dark-red;
 		}
 	}
 

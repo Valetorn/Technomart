@@ -2554,13 +2554,11 @@ main {
 .range__subline {
   position: absolute;
   left: 0;
-  right: 12%;
+  right: 0;
   height: 100%;
   background-color: #00cb75;
 }
-.range__subline::before,
-.range__subline::after {
-  content: '';
+.range__btn {
   position: absolute;
   top: -10px;
   width: 20px;
@@ -2571,12 +2569,19 @@ main {
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
+  outline: none;
 }
-.range__subline::before {
+.range__btn--min {
   left: 0;
 }
-.range__subline::after {
+.range__btn--max {
   right: 0;
+}
+.range__btn:hover {
+  background-color: #ee3643;
+}
+.range__btn:active {
+  background-color: #ee3643;
 }
 .range__cost-container {
   display: -webkit-box;
