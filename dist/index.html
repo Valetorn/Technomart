@@ -26,7 +26,7 @@
 					</form>
 
 					<div class="user-choice">
-						<a href="#" class="user-choice__tab user-choice__link">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
+						<a href="#" class="user-choice__tab user-choice__link" id="bookmarks">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
 
 						<a href="#" class="user-choice__shopping-card user-choice__link" id="checkout">Корзина: <span class="user-choice__counter" id="shopping-card-counter">0</span></a>
 
@@ -35,11 +35,11 @@
 						<div class="user-choice__purchases hidden">
 							<div class="user-choice__content" id="shopingcard-content"></div>
 
-							<footer class="user-choice__footer">
+							<div class="user-choice__footer">
 								<div class="user-choice__inner">
 									<button class="btn btn--red user-choice__clean-btn" id="clear_cart">Очистить корзину</button>
 								</div>
-							</footer>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -69,8 +69,9 @@
 
 						<div class="login__container login__container--hidden">
 							<a href="#" class="btn btn--white login__user">Равшан Джамшутович
-								<button class="btn login__logout">Выйти</button>
 							</a>
+
+							<button class="btn login__logout">Выйти</button>
 
 							<div class="login__person-container">
 								<a href="#" class="login__my-order login__link">Мои заказы</a>
@@ -212,7 +213,7 @@
 									<div class="product__btn-container">
 										<a href="#" class="btn btn--green product__shopcard-btn" data-id="1">Купить</a>
 
-										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+										<a href="#" class="btn btn--border product__tab-btn" data-id="1">В закладки</a>
 									</div>
 								</div>
 
@@ -232,7 +233,7 @@
 									<div class="product__btn-container">
 										<a href="#" class="btn btn--green product__shopcard-btn" data-id="2">Купить</a>
 
-										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+										<a href="#" class="btn btn--border product__tab-btn" data-id="2">В закладки</a>
 									</div>
 								</div>
 
@@ -252,7 +253,7 @@
 									<div class="product__btn-container">
 										<a href="#" class="btn btn--green product__shopcard-btn" data-id="3">Купить</a>
 
-										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+										<a href="#" class="btn btn--border product__tab-btn" data-id="3">В закладки</a>
 									</div>
 								</div>
 
@@ -272,7 +273,7 @@
 									<div class="product__btn-container">
 										<a href="#" class="btn btn--green product__shopcard-btn" data-id="4">Купить</a>
 
-										<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+										<a href="#" class="btn btn--border product__tab-btn" data-id="4">В закладки</a>
 									</div>
 								</div>
 
@@ -437,7 +438,7 @@
 
 						<p class="text--small-black contacts__text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
 
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1500226146295" width="300" height="158" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1500226146295" width="300" height="158" style="border:0" allowfullscreen class="map"></iframe>
 
 						<a href="#" class="btn btn--red contacts__btn" id="open-feedback">Заблудились? НАПИШИТЕ НАМ!</a>
 					</section>
@@ -597,11 +598,13 @@
 
 		<script src="js/openFeedback.js"></script>
 
-		<script src="js/toBuy.js"></script>
+		<script src="js/buy.js"></script>
 
-		<script src="js/toRelay.js"></script>
+		<script src="js/bookmark.js"></script>
 
-		<script src="js/toSlide.js"></script>
+		<script src="js/relay.js"></script>
+
+		<script src="js/slide.js"></script>
 	</body>
 </html>
 

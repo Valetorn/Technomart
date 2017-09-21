@@ -1,6 +1,6 @@
 'use strict';
 
-var toBuy = (function () {
+var buy = (function () {
 	var productsContainer = document.querySelector('#products-container');
 	var allProducts = productsContainer.querySelectorAll('.product');
 	var buy = document.querySelector('#buy');
@@ -8,6 +8,7 @@ var toBuy = (function () {
 	var continueShoping = buy.querySelector('#continueShoping');
 	var shopingCardCounter = document.querySelector('#shopping-card-counter');
 	var cartCont = document.querySelector('#shopingcard-content');
+	var cart = document.querySelector('#checkout');
 
 	var getCartData = function () {
 		return JSON.parse(localStorage.getItem('cart'));
@@ -22,6 +23,7 @@ var toBuy = (function () {
 		for(var items in data) {
 			count += data[items][2];
 			shopingCardCounter.innerHTML = count;
+			cart.classList.add('user-choice__shopping-card--active');
 		}
 	};
 	var setCounter = function () {
@@ -33,6 +35,7 @@ var toBuy = (function () {
 	var clearCart = function () {
 		localStorage.removeItem('cart');
 		shopingCardCounter.innerHTML = 0;
+		cart.classList.remove('user-choice__shopping-card--active');
 		cartCont.innerHTML = '<p class="user-choice__text">Корзина очишена.</p>';
 	};
 	var delProduct = function (evt) {
@@ -139,7 +142,7 @@ var toBuy = (function () {
 			openCart(evt);
 		}
 	});
-	document.querySelector('#checkout').addEventListener('keydown', function (evt) {
+	cart.addEventListener('keydown', function (evt) {
 		if(utils.isActivationEvent(evt)) {
 			document.querySelector('.user-choice__purchases').classList.remove('hidden');
 			openCart(evt);

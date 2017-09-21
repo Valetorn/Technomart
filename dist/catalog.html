@@ -29,7 +29,7 @@
 					</form>
 
 					<div class="user-choice">
-						<a href="#" class="user-choice__tab user-choice__link">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
+						<a href="#" class="user-choice__tab user-choice__link" id="bookmarks">Закладки: <span class="user-choice__-counter" id="tab-counter">0</span></a>
 
 						<a href="#" class="user-choice__shopping-card  user-choice__link" id="checkout">Корзина: <span class="user-choice__counter" id="shopping-card-counter">0</span></a>
 
@@ -38,11 +38,11 @@
 						<div class="user-choice__purchases hidden">
 							<div class="user-choice__content" id="shopingcard-content"></div>
 
-							<footer class="user-choice__footer">
+							<div class="user-choice__footer">
 								<div class="user-choice__inner">
 									<button class="btn btn--red user-choice__clean-btn" id="clear_cart">Очистить корзину</button>
 								</div>
-							</footer>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -72,8 +72,9 @@
 
 						<div class="login__container">
 							<a href="#" class="btn btn--white login__user">Равшан Джамшутович
-								<button class="btn login__logout">Выйти</button>
 							</a>
+
+							<button class="btn login__logout">Выйти</button>
 
 							<div class="login__person-container">
 								<a href="#" class="login__my-order login__person-link">Мои заказы</a>
@@ -277,7 +278,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="2">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="2">В закладки</a>
 										</div>
 									</div>
 
@@ -297,7 +298,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="3">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="3">В закладки</a>
 										</div>
 									</div>
 
@@ -317,7 +318,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="4">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="4">В закладки</a>
 										</div>
 									</div>
 
@@ -337,7 +338,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="2">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="2">В закладки</a>
 										</div>
 									</div>
 
@@ -357,7 +358,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="3">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="3">В закладки</a>
 										</div>
 									</div>
 
@@ -377,7 +378,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="4">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="4">В закладки</a>
 										</div>
 									</div>
 
@@ -397,7 +398,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="2">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="2">В закладки</a>
 										</div>
 									</div>
 
@@ -417,7 +418,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="3">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="3">В закладки</a>
 										</div>
 									</div>
 
@@ -437,7 +438,7 @@
 										<div class="product__btn-container">
 											<a href="#" class="btn btn--green product__shopcard-btn" data-id="4">Купить</a>
 
-											<a href="#" class="btn btn--border product__tab-btn">В закладки</a>
+											<a href="#" class="btn btn--border product__tab-btn" data-id="4">В закладки</a>
 										</div>
 									</div>
 
@@ -603,8 +604,10 @@
 
 		<script src="js/popup.js"></script>
 
-		<script src="js/toBuy.js"></script>
+		<script src="js/buy.js"></script>
 
-		<script src="js/toRange.js"></script>
+		<script src="js/bookmark.js"></script>
+
+		<script src="js/range.js"></script>
 	</body>
 </html>
